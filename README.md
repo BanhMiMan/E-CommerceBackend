@@ -1,3 +1,5 @@
+
+https://github.com/BanhMiMan/E-CommerceBackend/assets/129315553/425d76ac-3ffb-4572-8fb6-58c8521aaab0
 # 13 Object-Relational Mapping (ORM): E-Commerce Back End
 
 ## Summary
@@ -7,6 +9,4 @@ Here is my refactoring of e-commerce backend. I altered the Models and api Route
 https://github.com/BanhMiMan/E-CommerceBackend
 
 
-
-Uploading Valorant 2023.08.06 - 23.16.18.24.mp4…
-
+https://youtu.be/A3aPQibpa7I
