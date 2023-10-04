@@ -5,7 +5,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 router.get('/', async (req, res) => {
   try {
     const allProducts = await Product.findAll({
-      include: [Category, Tag],
+      include: [Category, Tag]
     });
     res.status(200).json(allProducts);
   } catch (err) {
@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const oneProduct = await Product.findByPk(req.params.id, {
-      include: [Category, Tag],
+      include: [Category, Tag]
     });
     if (!oneProduct) {
       res.status(404).json({ message: 'Product id not found' });
@@ -53,12 +53,12 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   try {
     await Product.update(req.body, {
-      where: { id: req.params.id },
+      where: { id: req.params.id }
     });
 
     if (req.body.tagIds && req.body.tagIds.length) {
       const productTagsToRemove = await ProductTag.findAll({
-        where: { product_id: req.params.id },
+        where: { product_id: req.params.id }
       });
 
       const productTagIds = productTagsToRemove.map(({ tag_id }) => tag_id);
@@ -86,7 +86,7 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   try {
     const deleteRowCount = await Product.destroy({
-      where: { id: req.params.id },
+      where: { id: req.params.id }
     });
 
     if (deleteRowCount === 0) {
