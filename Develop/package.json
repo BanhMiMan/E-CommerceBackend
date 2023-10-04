@@ -9,10 +9,6 @@
     "watch": "nodemon server.js",
     "seed": "node seeds/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@work.github.com:coding-boot-camp/module-13-challenge-orm.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
